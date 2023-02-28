@@ -1,0 +1,199 @@
+* {
+	box-sizing: border-box;
+	color: rgb(23, 26, 32);
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.main-header {
+	line-height: 1;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+.message {
+	background: #fff;
+	font-size: .95rem;
+	padding: 1.15rem 3rem;
+	text-align: center;
+}
+
+.inner-wrap {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 15rem 1fr 15rem;
+	grid-template-rows: 1fr;
+	font-weight: 500;
+	min-height: 3.5rem;
+	padding: 0 3rem;
+}
+
+.site-link {
+	display: flex;
+}
+
+.logo {
+	max-width: 7.5rem;
+}
+
+.navigation-main {
+	display: flex;
+	justify-content: center;
+}
+
+.inner-wrap ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+}
+
+.inner-wrap ul a {
+	color: rgb(23, 26, 32);
+	font-size: .9rem;
+	padding: .3rem 1rem;
+	text-decoration: none;
+}
+
+.navigation-user ul {
+	justify-content: right;
+	transform: translateX(1rem);
+}
+
+main {
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+}
+
+.snap {
+	scroll-snap-align: start;
+	height: 100vh;
+	position: relative;
+}
+
+.snap .section-img {
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.snap header {
+	margin-top: 18vh;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 20;
+	transition: 1s all;
+}
+
+.snap.active header {
+	opacity: 1;
+}
+
+.snap h2 {
+	font-size: 2.5rem;
+	margin-bottom: 0.3rem;
+}
+
+.snap p {
+	font-size: 1.1rem;
+}
+
+.snap .buttons {
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	bottom: 5rem;
+	width: 100%;
+	z-index: 20;
+	transition: 1s all;
+}
+
+.snap.active .buttons {
+	opacity: 1;
+}
+
+
+.snap .btn {
+	background: rgba(23, 26, 32, 0.8);
+	border-radius: .3rem;
+	color: #fff;
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin: 0 .75rem;
+	min-width: 16.5rem;
+	padding: .7rem 1rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+.snap.active .btn {
+	pointer-events: auto;
+}
+
+.snap .btn.alt {
+	background: rgba(244, 244, 244, 0.65);
+	color: rgb(23, 26, 32);
+}
+
+.material-symbols-outlined {
+	font-size: 2rem;
+	font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 100
+}
+
+.snap .next-section {
+	display: flex;
+	opacity: 0;
+	justify-content: center;
+	pointer-events: none;
+	position: fixed;
+	bottom: 1.3rem;
+	text-decoration: none;
+	width: 100%;
+	z-index: 20;
+}
+
+.snap.active .next-section {
+	opacity: 1;
+	pointer-events: all;
+	transition: 1s all;
+}
+
+footer {
+	display: none;
+}
+
+footer ul {
+	position: fixed;
+	bottom: 1.7rem;
+	width: 100%;
+}
+
+footer ul {
+	display: flex;
+	font-size: 0.8rem;
+	list-style-type: none;
+	justify-content: center;
+}
+
+footer li {
+	padding: 0 .5rem;
+}
+
+footer a {
+	text-decoration: none;
+}
